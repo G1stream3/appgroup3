@@ -1,4 +1,4 @@
 {
-    "mongoURI":
-      "mongodb+srv://admin:admin@seeds-cluster.rcs5r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI":
+    "mongodb+srv://wangyubo:wyb2000121@cluster0.poifa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
