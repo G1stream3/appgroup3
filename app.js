@@ -12,12 +12,9 @@ const app = express();
 connectDB();
 
 const PORT = process.env.PORT || 8080;
-mongoose.connect(process.env.MONGODB || 'mongodb://localhost/mern_youtube',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+
 if (process.env.NODE_ENV ==='production'){
-    app.use(express.static('seeds-app/build'))
+    app.use(express.static('seeds-app/build'));
 }
 
 // cors
