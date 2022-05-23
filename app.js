@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 var cors = require('cors');
-
+const path = require('path');
 
 const users = require('./routes/api/users');
 const articles = require('./routes/api/articles');
@@ -11,12 +11,19 @@ const app = express();
 // Connect Database
 connectDB();
 
-const port = process.env.PORT || 8082;
+const port = process.env.PORT || 8080;
 
-if (process.env.NODE_ENV ==='production'){
-    app.use(express.static('seeds-app/build'));
-}
+require("dotenv").config({path:"./config.env"});
 
+
+
+if (process.env.NODE_ENV ==="production"){
+        app.use(express.static(path.join(__dirname,'/seeds-app/build')));
+      
+        app.get('*',(req,res) => {
+            res.sendFile(path.join(__dirname,'seeds-app','build','index.html'));
+        });
+    }
 // cors
 app.use(cors({ origin: true, credentials: true }));
 

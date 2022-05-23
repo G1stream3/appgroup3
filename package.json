@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "build":"cd seeds-app && npm run build",
-    "install-client":"cd seeds-app && npm install",
+    "build": "cd seeds-app && npm run build",
+    "install-client": "cd seeds-app && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "body-parser": "^1.19.0",
     "config": "^3.3.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.5.15",
     "validation": "0.0.1"
