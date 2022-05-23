@@ -11,7 +11,7 @@ const app = express();
 // Connect Database
 connectDB();
 
-const PORT = process.env.PORT || 8080;
+const port = process.env.PORT || 8082;
 
 if (process.env.NODE_ENV ==='production'){
     app.use(express.static('seeds-app/build'));
@@ -29,5 +29,7 @@ app.use('/api/users', users);
 
 app.use(express.static(__dirname+'/seeds-app/build'));
 app.get('*', (req, res) => {res.sendFile(__dirname+'/seeds-app/build/index.html')});
+
+
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
