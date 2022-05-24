@@ -1,0 +1,42 @@
+name: CI/CD
+on:
+ push:
+  branches: [ main ]
+ pull_request:
+  branches: [ main ]
+  
+jobs:
+ build:
+
+  runs-on: ubuntu-latest
+  
+  strategy:
+    matrix:
+     node-version: [14.x]
+   
+  steps:
+  - name: Checkout repository
+    uses: actions/checkout@v2
+ 
+  - name: Set up Node.js ${{ matrix.node-version }}
+    uses: actions/setup-node@v1
+    with:
+     node-version: ${{ matrix.node-version }}
+  
+  - name: Install dependencies
+    run: npm install
+    
+  - name: Installs cors
+    run: npm install cors
+    
+  - name: Install dependencies in speed app
+    run: npm install --prefix speeds
+
+  - name: Run lint test in speed-app
+    run: npm run lint --prefix speeds
+    
+  - name: Run tests to check if webpage renders
+    run: npm run test --prefix speeds
+    
+  - name: Build
+    run: npm run build --prefix speeds
