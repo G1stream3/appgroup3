@@ -1,26 +1,26 @@
 {
-  "name": "seeds",
+  "name": "speeds",
   "version": "1.0.0",
   "description": "ENSE701: Assessment 1B",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "build": "cd seeds-app && npm run build",
-    "install-client": "cd seeds-app && npm install",
+    "build": "cd speeds && npm run build",
+    "install-client": "cd speeds && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Scuftz/seeds.git"
+    "url": "git+https://github.com/G1stream3/appgroup3.git"
   },
-  "author": "Shivneel Singh Brendan Khaw Brenan Dio",
+  "author": "chenhui",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Scuftz/seeds/issues"
+    "url": "https://github.com/G1stream3/appgroup3.git/issues"
   },
-  "homepage": "https://github.com/Scuftz/seeds#readme",
+  "homepage": "https://github.com/G1stream3/appgroup3.git#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -35,3 +35,4 @@
     "nodemon": "^1.19.1"
   }
 }
+
