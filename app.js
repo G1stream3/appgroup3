@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
         app.use(express.static(path.join(__dirname, "/speeds/build")));
       
         app.get("*", (req, res) => {
-          res.sendFile(path.join(__dirname, "speeds-app", "build", "index.html"));
+          res.sendFile(path.join(__dirname, "speeds", "build", "index.html"));
         });
       } else {
         app.get("/", (req, res) => {
@@ -39,8 +39,8 @@ app.use(express.json({ extended: false }));
 app.use('/api/articles', articles);
 app.use('/api/users', users);
 
-app.use(express.static(__dirname+'/seeds-app/build'));
-app.get('*', (req, res) => {res.sendFile(__dirname+'/seeds-app/build/index.html')});
+app.use(express.static(__dirname+'/speeds/build'));
+app.get('*', (req, res) => {res.sendFile(__dirname+'/speeds/build/index.html')});
 
 
 
