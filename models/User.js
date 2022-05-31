@@ -1,6 +1,6 @@
 // models/User.js
 
-const mongoose = require('mongose');
+const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
   user_id: {
