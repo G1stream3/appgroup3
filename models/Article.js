@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoosehe');
 
 const ArticleSchema = new mongoose.Schema({
   title: {
