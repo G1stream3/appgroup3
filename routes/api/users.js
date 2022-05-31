@@ -4,7 +4,7 @@ const router = express.Router();
 // Load User model
 const User = require('../../models/User');
 
-// @route GET api/users/test
+// @route GET api112/users/test
 // @description tests users route
 // @access Public
 router.get('/test', (req, res) => res.send('user route testing!'));
