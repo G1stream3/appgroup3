@@ -21,7 +21,7 @@ class UpdateArticleInfo extends Component {
 
   componentDidMount() {
     axios
-      .get('https://ense701-seeds-app.herokuapp.com/api/articles/'+this.props.match.params.id) //get the article whose status will be updated
+      .get('https://speedappgroup3.herokuapp.com/api/articles/'+this.props.match.params.id) //get the article whose status will be updated
       .then(res => {
         this.setState({ //store the new data inside
           title: res.data.title,
