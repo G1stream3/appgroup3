@@ -13,7 +13,7 @@ class ShowArticleDetails extends Component {
 
   componentDidMount() {
     axios
-      .get('https://ense701-seeds-app.herokuapp.com/api/articles/article/'+this.props.match.params.id) //get the details of a specific article
+      .get('https://speedappgroup3.herokuapp.com/api/articles/article/'+this.props.match.params.id) //get the details of a specific article
       .then(res => {
         this.setState({
           article: res.data
@@ -26,7 +26,7 @@ class ShowArticleDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('https://ense701-seeds-app.herokuapp.com/api/articles/'+id) //delete an article from the database (moderater declined article)
+      .delete('https://speedappgroup3.herokuapp.com/api/articles/'+id) //delete an article from the database (moderater declined article)
       .then(res => {
         this.props.history.push("/moderation");
       })
@@ -52,7 +52,7 @@ class ShowArticleDetails extends Component {
     };
 
     axios
-      .put('https://ense701-seeds-app.herokuapp.com/api/articles/'+this.props.match.params.id, data) //return to moderation page after approving
+      .put('https://speedappgroup3.herokuapp.com/api/articles/'+this.props.match.params.id, data) //return to moderation page after approving
       .then(res => {
         this.props.history.push('/moderation');
       })

@@ -13,7 +13,7 @@ class SearchArticleDetails extends Component {
 
   componentDidMount() {
     axios
-      .get('https://ense701-seeds-app.herokuapp.com/api/articles/article/'+this.props.match.params.id) //get the article details of a single article
+      .get('https://speedappgroup3.herokuapp.com//api/articles/article/'+this.props.match.params.id) //get the article details of a single article
       .then(res => {
         this.setState({
           article: res.data
