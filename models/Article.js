@@ -20,7 +20,6 @@ const ArticleSchema = new mongoose.Schema({
   },
   doi: {
     type: String,
-    type: String,
   },
   process_status: {
     type: String,
