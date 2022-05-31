@@ -15,7 +15,7 @@ class ArticleResult extends Component {
     const query = this.props.location.state;
 
     axios
-      .post('https://ense701-seeds-app.herokuapp.com/api/articles/search', query) //get all the articles that match the query parameters
+      .post('https://dashboard.heroku.com/apps/speedappgroup3/api/articles/search', query) //get all the articles that match the query parameters
       .then(res => {
         this.setState({
           articles: res.data
