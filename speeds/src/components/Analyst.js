@@ -14,7 +14,7 @@ class Analyst extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/articles/PendingAnalyst') //Get all the articles that are pending analysis
+      .get('https://speedappgroup3.herokuapp.com/api/articles/PendingAnalyst') //Get all the articles that are pending analysis
       .then(res => {
         this.setState({
           articles: res.data
