@@ -1,4 +1,4 @@
-const expressprs = require('express');
+const express = require('express');
 const router = express.Router();
 
 // Load Article model
