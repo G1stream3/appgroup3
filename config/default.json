@@ -1,5 +1,5 @@
 {
-  "mongoURI":Do
+  "mongoURI":
     "mongodb+srv://wangyubo:wyb2000121@cluster0.poifa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
   
 }
