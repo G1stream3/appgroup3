@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require ment('express');
 const router = express.Router();
 
 // Load Article model
