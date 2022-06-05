@@ -1,4 +1,4 @@
-const express = require('express');kkpost
+const express = require('express');
 const router = express.Router();
 
 // Load Article model
